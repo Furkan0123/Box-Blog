@@ -1,0 +1,72 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Oxer</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+<!-- nabvar -->
+{% include 'partials/_navbar.html' %}
+
+{% block content %}
+{% endblock %}
+
+<section class=" footer_section ">
+    <div class="social_box">
+      <a href="#">
+        <img src="{% static 'images/facebook.png' %}" alt="">
+      </a>
+      <a href="#">
+        <img src="{% static 'images/twitter.png' %}" alt="">
+      </a>
+      <a href="#">
+        <img src="{% static 'images/linkedin.png' %}" alt="">
+      </a>
+      <a href="#">
+        <img src="{% static 'images/instagram.png' %}" alt="">
+      </a>
+      <a href="#">
+        <img src="{% static 'images/youtube.png' %}" alt="">
+      </a>
+    </div>
+    <p>
+      &copy; 2020 All Rights Reserved. Design by
+      <a href="https://html.design/"></a>
+    </p>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="{% static 'js/timeline.min.js' %}"></script>
+  <script>
+    $(window).on('load', function() {
+        $('#logreg').modal('show');
+    });
+</script>
+</body>
+
+</html>

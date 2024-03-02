@@ -1,0 +1,79 @@
+{% extends 'partials/_base.html' %}
+{% load static  %}
+
+{% block content %}
+    <!-- end header section -->
+  
+
+  <!-- class section -->
+
+  <section class="class_section layout_padding">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto">
+          <div class="class_container">
+            <div class="row">
+              <div class="col-lg-9 col-md-10">
+                <div class="heading_container">
+                  <h2>
+                    Our Classes 
+                  </h2>
+                  <p>
+                    iusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n
+                    ostrud exercitation ullamco laboris iusmod tempor incididunt ut labore et dolore
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          
+          <div id="overviews" class="section wb">
+              <div class="container">
+                  <div class="row"> 
+                      <div class="col-lg-9 blog-post-single">
+                          <div class="row"> 
+                              {% for class_obj in classes %}
+                              <div class="col-lg-6 col-md-6 col-12 mb-5">
+                                  <div class="course-item">
+                                      <div class="image-blog">
+                                          <img src="{{ class_obj.image.url }}" alt="" class="img-fluid">
+                                      </div>
+                                      <div class="course-br">
+                                          <div class="course-title">
+                                              <h2><a href="{% url 'class_detail' class_obj.category.slug class_obj.id %}">{{ class_obj.name }}</a></h2>
+                                          </div>
+                                          <div class="course-desc">
+                                              <p>{{ class_obj.description | truncatechars:100 }}</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div><!-- end col -->
+                              {% endfor %}
+                          </div><!-- end row -->
+                      </div><!-- end col-lg-9 -->
+                  </div><!-- end row -->
+              </div><!-- end container -->
+          </div><!-- end section -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end class section -->
+
+
+  <!-- info section -->
+
+  <!-- end info section -->
+
+  <!-- owl carousel script -->
+
+
+</body>
+
+</html>
+
+{% endblock %}

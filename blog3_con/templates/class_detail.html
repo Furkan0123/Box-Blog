@@ -1,0 +1,58 @@
+{% extends 'partials/_base.html' %}
+{% load static  %}
+
+{% block content %}
+    <!-- class section -->
+
+    <section class="class_section layout_padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <div class="class_container">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-10">
+                                <div class="heading_container">
+                                    <h2>
+                                        {{ class_obj.name }}
+                                    </h2>
+                                    <p>
+                                        {{ class_obj.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class_box-container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="box">
+                                        <div class="img-box">
+                                            <img src="{{ class_obj.image.url }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="box">
+                                        <div class="detail-box">
+                                            <h2></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end class section -->
+
+
+    <!-- info section -->
+
+    <!-- end info section -->
+
+
+    <!-- owl carousel script -->
+
+{% endblock %}

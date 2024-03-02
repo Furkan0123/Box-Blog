@@ -1,0 +1,109 @@
+{% extends 'partials/_base.html' %}
+{% load static  %}
+
+{% block content %}
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+  <div id="overviews" class="section wb">
+    <div class="container">
+        <div class="row"> 
+            <div class="col-lg-9 blog-post-single">
+                <div class="row"> 
+                    {% for about in abouts %}
+                    <div class="col-lg-6 col-md-6 col-12 mb-5">
+                        <div class="course-item">
+                            <div class="image-blog">
+                                <img src="{{ about.image.url }}" alt="" class="img-fluid">
+                            </div>
+                            <div class="course-br">
+                                <div class="course-title">
+                                    <h2><a href="">{{ about.title }}</a></h2>
+                                </div>
+                                <div class="course-desc">
+                                    <p>{{ about.description  }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+                    
+                </div><!-- end row -->
+                {% endfor %}
+            </div><!-- end col-lg-9 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
+  <!-- end about section -->
+
+  <div class="info_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 ml-auto">
+          <div class="row info_main-row">
+            <div class="col-md-6 pr-0">
+              <section class="client_section layout_padding-bottom">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto">
+                      <div class="client_container">
+                        <div class="heading_container">
+                          <h2>What Our Students Say</h2>
+                          <p>Here are some testimonials from our students.</p>
+                        </div>
+                        <div id="overviews" class="section wb">
+                          <div class="container">
+                              <div class="row"> 
+                                  <div class="col-lg-9 blog-post-single">
+                                      <div class="row"> 
+                                          {% for student_review in student_reviews %}
+                                          <div class="col-lg-6 col-md-6 col-12 mb-5">
+                                              <div class="course-item">
+                                                  <div class="image-blog">
+                                                      <img src="{{ student_review.image.url }}" alt="" class="img-fluid">
+                                                  </div>
+                                                  <div class="course-br">
+                                                      <div class="course-title">
+                                                          <h2><a href="">{{ student_review.name }}</a></h2>
+                                                      </div>
+                                                      <div class="course-desc">
+                                                          <p>{{ student_review.description | truncatechars:100 }}</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div><!-- end col -->
+                                          
+                                      </div><!-- end row -->
+                                      
+                                  </div><!-- end col-lg-9 -->
+                                  {% endfor %}
+                              </div><!-- end row -->
+                          </div><!-- end container -->
+                      </div><!-- end section -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+            
+              
+              <!-- end contact section -->
+
+
+ 
+               <!-- footer section -->
+
+
+
+ </body>
+
+</html>
+
+{% endblock %} 
